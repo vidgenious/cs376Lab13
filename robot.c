@@ -10,7 +10,7 @@
  */
 
 #include "robot.h"
-
+#include <string.h>
 /**
  * robotPrintMessage
  *
@@ -33,13 +33,21 @@ void robotPrintAscii(void)
   int i;
   char* blank = "                              ";
   blank = blank +30;
+int j = 0;
+for(j; j<3; j++)
+{
   printf("\n\n"
 	 "UWR: Unidentified Wheeled Robot\n"
 	 "%s    i_i    \n"
 	 "%s   [*_^]   \n"
 	 "%s  /|___|\\ \n"
 	 "%s   d   b   \n",blank, blank, blank, blank);
-
+blank = "          ";
+if(j==1)
+{
+blank = "                         ";
+}
+}
   blank = blank - 10;
 }
 
